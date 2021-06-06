@@ -283,16 +283,20 @@ class KodeshDays implements IkodeshDays {
   }
 
 
-
-
+  
   public function next_kodesh_days() {
+    /**
+     * Find the next KODESH day, in order to set the
+     * Set the strat checking option to Erev Shabbat or Chag at 00:00:00
+     * End checking time by the day after Shabbat or Chag at 12:00:00
+     * Set timing to UTC 0 time zone
+     */
     $result = array();
 
-    /** Set base hour to  00:00 */
-    date_default_timezone_set("UTC");
-    $dt = new DateTime(strtotime("", $this->timestamp));
-    $dt = date_time_set($dt , 0 , 0);
-    $this->timestamp = date_format($dt, "U");
+    /** Set base hour to  00:00 and Datetime object to UTC timezone */
+    $date_utc = new \DateTime("now", new \DateTimeZone("UTC"));
+    $date_utc = date_time_set($date_utc , 0 , 0);
+    $this->timestamp = date_format($date_utc, "U");
 
     /** Get the start day */
     $startJulDate = "";
@@ -357,11 +361,5 @@ class KodeshDays implements IkodeshDays {
 
 
 }
-
- 
-
-
-
-
 
 ?>
