@@ -72,7 +72,7 @@ function jt_kodesh() {
 
 	if( $kodesh_status == "KODESH") {
 
-		pop_site_blocker($kodesh_status);
+		pop_kodeshDay_blocker($kodesh_status);
 	}
 	
 }
@@ -80,7 +80,7 @@ function jt_kodesh() {
 
 
 //** Pop's the site blocker on Kodesh days. */
-function pop_site_blocker($msgArr) {
+function pop_kodeshDay_blocker($msgArr) {
 	
 	//
 	include_once "src/jt-kodesh-blockPage.php";
@@ -133,11 +133,12 @@ function jt_settings_page() {
   }
 
 // Add the settings page actoin
-add_action('admin_menu', 'jt_settings_page');
+// # This adds a link to settings menu, as v0.1 it's not needed. 
+// add_action('admin_menu', 'jt_settings_page');
 
 
 /** Set a link to the settings page from the plugin page */
-function plugin_settings_link($links) { 
+function jt_kodesh_setting_link($links) { 
 
 	$settings_link = '<a href="options-general.php?page=jt_kodesh">Settings</a>'; 
 	array_unshift($links, $settings_link); 
@@ -146,7 +147,7 @@ function plugin_settings_link($links) {
   }
 
 $plugin = plugin_basename(__FILE__); 
-add_filter("plugin_action_links_$plugin", 'plugin_settings_link' );
+add_filter("plugin_action_links_$plugin", 'jt_kodesh_setting_link' );
 
 
 
@@ -160,15 +161,15 @@ add_action('plugins_loaded', 'jt_kodesh_load_textdomain');
 
 
 /**Adding test short code (needed?)*/
-function test_shortcode() {
+function jtk_test_shortcode() {
 
 	$testArray = array(
 		"day_name" => "Testing",
 		"ends" => strtotime("+ 1 minute", time())
 	);
-	pop_site_blocker($testArray);
+	pop_kodeshDay_blocker($testArray);
 }
-add_shortcode('jtk-test', 'test_shortcode');
+add_shortcode('jtk-test', 'jtk_test_shortcode');
 
 
 
