@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-05-06 17:56+0300\n"
-"PO-Revision-Date: 2021-05-06 17:56+0300\n"
+"POT-Creation-Date: 2021-07-06 18:33+0300\n"
+"PO-Revision-Date: 2021-07-06 18:34+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -17,18 +17,34 @@ msgstr ""
 "X-Poedit-SearchPath-1: .\n"
 "X-Poedit-SearchPath-2: .\n"
 
-#: jt-kodesh-blockPage.php:70
+#: jt-kodesh-blockPage.php:67
 msgid "Shabbat Shalom"
 msgstr "שבת שלום"
 
-#: jt-kodesh-blockPage.php:71
+#: jt-kodesh-blockPage.php:68
 msgid "This website respects Shabbat and the Jewish holidays"
 msgstr "אתר זה שומר שבת וחגי ישראל"
 
-#: jt-kodesh-blockPage.php:72
+#: jt-kodesh-blockPage.php:69
 msgid "The website will return to activity immediately after the Shabbat ends"
 msgstr "האתר ישוב לפעילות מיד בצאת השבת"
 
-#: jt-kodesh-blockPage.php:79
+#: jt-kodesh-blockPage.php:73
 msgid "The website will be back in "
 msgstr "האתר ישוב לפעול בעוד"
+
+#: jt-kodesh-blockPage.php:78
+msgid "Days"
+msgstr "ימים"
+
+#: jt-kodesh-blockPage.php:87
+msgid "Hours"
+msgstr "שעות"
+
+#: jt-kodesh-blockPage.php:95
+msgid "Minutes"
+msgstr "דקות"
+
+#: jt-kodesh-blockPage.php:103
+msgid "Seconds"
+msgstr "שניות"
