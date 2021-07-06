@@ -72,7 +72,7 @@ function jt_kodesh() {
 
 	if( $kodesh_status == "KODESH") {
 
-		pop_kodeshDay_blocker($kodesh_status);
+		pop_kodeshDay_blocker();
 	}
 	
 }
@@ -80,7 +80,7 @@ function jt_kodesh() {
 
 
 //** Pop's the site blocker on Kodesh days. */
-function pop_kodeshDay_blocker($msgArr) {
+function pop_kodeshDay_blocker() {
 	
 	//
 	include_once "src/jt-kodesh-blockPage.php";
@@ -159,15 +159,11 @@ function jt_kodesh_load_textdomain() {
 add_action('plugins_loaded', 'jt_kodesh_load_textdomain');
 
 
-
 /**Adding test short code (needed?)*/
 function jtk_test_shortcode() {
 
-	$testArray = array(
-		"day_name" => "Testing",
-		"ends" => strtotime("+ 1 minute", time())
-	);
-	pop_kodeshDay_blocker($testArray);
+	pop_kodeshDay_blocker();
+	
 }
 add_shortcode('jtk-test', 'jtk_test_shortcode');
 

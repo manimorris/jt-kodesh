@@ -1,0 +1,60 @@
+.custom-body {
+    height: 90vh;
+    overflow-y: auto; 
+    border-radius: 0.5em;
+    /* background-image: url(<?php echo imageEncodeURL(__DIR__.'/background.jpg') ?>); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    font-family: Assistant, Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+.modal-content{
+    z-index: 9999999;
+}
+
+.msgTitle{
+    color:rgba(42, 68, 110);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.msgText{
+    color:#ae8319;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#jt-footer{
+    font-size:1em;
+    margin:0.5em;
+    text-align: left;
+
+}
+#jt-footer img {
+    width: 7em;
+}
+
+/*cTimer*/
+.timer-cards{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.time-card{
+    border: 2px solid #ae8319;
+    border-radius: 10px 0 12px 0;
+    width:10%;
+    
+}
+.timer-card-header{
+    font-size: 1.5rem;
+    background-color:rgb(30, 79, 156) ;
+    color: white;
+}
+.time-card-body{
+    padding: 0.1rem;
+}
+

@@ -73,7 +73,19 @@ function get_jt_cookie() {
 
 	if (isset($_COOKIE['jt_kodesh_pass'])) {
 
-		return $_COOKIE["jt_kodesh_pass"];
+		$cookie = wporg_recursive_sanitize_text_field( $_COOKIE["jt_kodesh_pass"] );
+		
+		if ($cookie["kodesh_status"] != "KODESH" && $cookie["kodesh_status"] != "CHOL") {
+			
+			return;
+		}
+		
+		if ($cookie["ends"] < time() ) {
+			
+			return;
+		}
+		
+		return $cookie ;
 	} 
 }
 
@@ -227,6 +239,22 @@ function next_kodesh_time() {
 
 	return $next_kodesh_time;
 }
+
+#endregion
+
+
+#region Custom helper funcitons
+
+	function wporg_recursive_sanitize_text_field( $array ) {
+		foreach ( $array as $key => &$value ) {
+			if ( is_array( $value ) ) {
+				$value = wporg_recursive_sanitize_text_field( $value );
+			} else {
+				$value = sanitize_text_field( $value );
+			}
+		}
+		return $array;
+	}
 
 #endregion
 

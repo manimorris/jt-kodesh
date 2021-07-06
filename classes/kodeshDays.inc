@@ -49,6 +49,11 @@ function getJewishHoliday($jdCurrent, $isDiaspora) {
 
   $jewishDate = jdtojewish($jdCurrent);
   list($jewishMonth, $jewishDay, $jewishYear) = explode('/', $jewishDate);
+  
+  
+   // Test (today)
+	//if ($jewishDay == 26 && $jewishMonth == $TAMMUZ)
+    //$result = "TEST HOLIDAY";
 
   // Kodesh days in Elul 
   // NONE
