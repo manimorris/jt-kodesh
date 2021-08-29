@@ -1,17 +1,18 @@
 <?php
 /*
-Plugin Name: Jewtech Shabbat and Kodesh days Plugin
+Plugin Name: Jt Kodesh
 Plugin URI: https://www.jewtech.co.il"
-Description: This plugin will help the website owner to keep Shabbat and Jewish holidays by closing the website during the 'Kodesh' days.
 Author: Cohen David, Morris Mani.
 Contributors: mamprog.
 Version: 1.0
 License: GPLv2 or later
-
+Requires at least: 4.6
+Tested up to: 5.8
+Requires PHP: 7.0
+Stable tag: 1.0
 Text Domain: Jt-Kodesh
 Domain Path: /languages
 
-Requires at least: 4.6
 */
 
 if ( !defined('ABSPATH') ) { 
@@ -159,7 +160,7 @@ function jt_kodesh_load_textdomain() {
 add_action('plugins_loaded', 'jt_kodesh_load_textdomain');
 
 
-/**Adding test short code (needed?)*/
+/**Adding test short code */
 function jtk_test_shortcode() {
 
 	pop_kodeshDay_blocker();

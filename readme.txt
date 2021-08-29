@@ -21,7 +21,7 @@ Closing the site: The plugin will pop up a designed message to the visitors, the
 How the plugin works:
 In order to save resources and running time of the website, the plugin was designed to operate only on erev Shabbat and Chag and until the end of the Shabbat or the Chag.
 During the operation, the plugin will check each visitor browsing the website, get his geographical location and between the of Candle lighting and Motzaei Shabbat/Chag according to the visitor's location, the popup message will block the site. A visitor will be identified once on his first login to the site, the plugin will keep his geographical location (temporarily) until Saturday. If the visitor's location is not identified, the extension will use the website's default location.
-After activating the plugin on the plugin settings page, you can test its activity by embed the testing short code (preferably on a dedicated test page):  [jtk_test_shortcode]
+After activating the plugin on the plugin settings page, you can test its activity by embed the testing short code (preferably on a dedicated test page):  [jtk-test]
 
 The plugin is availbe in English and Hebrew.
 
@@ -33,7 +33,7 @@ The plugin is availbe in English and Hebrew.
 אופן פעולת התוסף: 
 על מנת לחסוך במשאבים ובזמן ריצה של האתר, התוסף תוכנן לפעול רק בימי ערב שבת וחג ועד לסיום השבת והחג. 
 בזמן הפעולה, התוסף יבדוק כל משתמש הגולש באתר, יקבל את המיקום הגיאוגרפי שלו ובין שעת כניסת השבת לצאת השבת לפי מיקומו של המשתמש יוצג למשתמש הודעה על כך שביום השבת או החג האתר סגור. משתמש יזוהה פעם אחת בכניסה הראשונה שלו לאתר, התוסף ישמור את המיקום הגיאוגרפי שלו (בצורה זמנית) עד לצאת השבת. במידה ומיקומו של המשתמש לא יזוהה, התוסף ישתמש בנתוני המיקום של האתר.
-לאחר הפעלת התוסף בדף הגדרות התוספים, ניתן לבדוק את פעילותו על ידי הטמעת השורטקוד [jtk_test_shortcode] (עדיף בדף בדיקה ייעודי)
+לאחר הפעלת התוסף בדף הגדרות התוספים, ניתן לבדוק את פעילותו על ידי הטמעת השורטקוד [jtk-test] (עדיף בדף בדיקה ייעודי)
 
 
  
